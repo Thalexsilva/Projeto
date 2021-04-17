@@ -1,73 +1,77 @@
-public class Veiculo{
+public abstract class Veiculo{
 
-  protected int ano;
-  protected String cor;
-  protected String placa;
-  protected char tipoComb; //'G'/'A','D','E'
+  protected int Ano;
+  protected String Cor;
+  protected String Placa;
+  protected char TipoComb; //'G','D','E'
   protected int KM;
   protected double VD; //valor Diaria
-
-  public int getVeiculoID(){
-    return veiculoID;
+  Leitura lc =new Leitura();
+  /*contrucao
+  public Veiculo(){}
+  public Veiculo(int Ano,String Cor,String Placa,char TipoComb,int KM,double VD){
+    this.Ano = Ano;
+    this.Cor= Cor;
+    this.Placa= Placa;
+    this.TipoComb = TipoComb;
+    this.KM = KM;
+    this.VD =VD;} */
+  //Cadastrar veiculo
+  void CadVeiculo(){
+      System.out.println("\n-----Cadastro Veiculo-----");
+      this.Ano=Integer.parseInt(lc.entDados("\nAno: "));
+      this.Cor=lc.entDados("\nCor: ");
+      this.Placa=lc.entDados("\nPlaca: : ");
+      this.TipoComb=lc.entDados("\nCombustivel E=Etanol,G=Gasolina,D=Diesel: ").charAt(0);
+      this.KM=Integer.parseInt(lc.entDados("\nKM atual Veículo: "));
+      this.VD=Double.parseDouble(lc.entDados("\nValor da Diária: "));  
   }
-
-  public int getAno(){
-    return ano;
-  }
-
-  public int getNumPortas(){
-    return numPortas;
+  
+  /*public int getAno(){
+    return Ano;
   }
 
   public String getCor(){
-    return cor;
+    return Cor;
   }
 
   public String getPlaca(){
-    return placa;
+    return Placa;
   }
 
-  public char getTipoCombustivel(){
-    return tipoCombustivel;
+  public char getTipoComb(){
+    return TipoComb;
   }
 
   public double getKM(){
     return KM;
   }
 
-  public double getValorDiaria(){
-    return valorDiaria;
+  public double getVD(){
+    return VD;
   }
 
-  public void setVeiculoID(int veiculoID){
-		this.veiculoID = veiculoID;
+  public void setAno(int Ano){
+		this.Ano = Ano;
 	}
 
-  public void setAno(int ano){
-		this.ano = ano;
+  public void setCor(String Cor){
+		this.Cor = Cor;
 	}
 
-  public void setNumPortas(int numPortas){
-		this.numPortas = numPortas;
+  public void setPlaca(String Placa){
+		this.Placa = Placa;
 	}
 
-  public void setCor(String cor){
-		this.cor = cor;
+  public void setTipoComb(char TipoComb){
+		this.TipoComb = TipoComb;
 	}
 
-  public void setPlaca(String placa){
-		this.placa = placa;
-	}
-
-  public void setTipoCombustivel(char tipoCombustivel){
-		this.tipoCombustivel = tipoCombustivel;
-	}
-
-  public void setKM(double KM){
+  public void setKM(int KM){
 		this.KM = KM;
 	}
 
-  public void setValorDiaria(double valorDiaria){
-		this.valorDiaria = valorDiaria;
-	}
+  public void setVD(double VD){
+		this.VD = VD;
+	}*/
 }
