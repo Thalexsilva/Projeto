@@ -1,4 +1,8 @@
-public abstract class Pessoa{
+
+
+
+//Thales de Oliveira Silva RA:1914855
+public abstract class Pessoa {
 
   protected String Nome;
   protected String Tel;
@@ -6,9 +10,11 @@ public abstract class Pessoa{
   protected Endereco  Ender = new Endereco();
   Leitura lc = new Leitura();
 
-void CadPessoa(){
+final void CadPessoa() throws NumEx {
       System.out.println("\n-----Cadastro Pessoa-----");
       this.Nome=lc.entDados("\nNome: ");
+
+  
       this.Tel=lc.entDados("\nTel: ");
       this.Cpf=lc.entDados("\nCpf: ");
       Ender.setRua((lc.entDados("\nRua : ")));
@@ -18,27 +24,4 @@ void CadPessoa(){
       Ender.setEstado((lc.entDados("\nEstado : ")));
   }
 
-public String getNome(){
-    return Nome;
-  }
-
-  public String getTel(){
-    return Tel;
-  }
-
-  public void setNome(String Nome){
-		this.Nome = Nome;
-	}
-  public void setTel(String Tel){
-		this.Tel = Tel;
-	}
-
-  // endereco 
-  public Endereco getEnder(){
-		return Ender;
-	}
-
-	public void setEnder(Endereco Ender){
-		this.Ender = Ender;
-	}
 }

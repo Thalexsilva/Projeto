@@ -1,29 +1,22 @@
+//Thales de Oliveira Silva RA:1914855
 public class Cliente extends Pessoa{
   
   
-  protected int Desc;
+  private int Desc;
   
   Leitura lc = new Leitura();
   
   
-  public Cliente(){
-
-  }
-  public Cliente(String Nome,Endereco Ender,String Tel,String Cpf,int Desc){
-    this.Nome = Nome;
-    this.Ender= Ender;
-    this.Tel= Tel;
-    this.Cpf = Cpf;
-    this.Desc = Desc;}
-    
-
+  public Cliente(){}
+  
   //Cadastrar Cliente
-  void CadCliente(){
+
+  void CadCliente() {
        System.out.println("\n-----Cadastro Cliente-----");
        super.CadPessoa();
+       Desc =Integer.parseInt(lc.entDados("Desconto cliente em %: "));
   }
 
-  //Get e Set
 
   
  
